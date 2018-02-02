@@ -145,3 +145,21 @@ video#vidFondo {
 .card-action{
   text-align: right;
 }
+.place-image{
+    position:absolute;
+    width:100%;
+    min-height: 245px;
+    display: block;
+    object-fit: cover;
+}
+
+.place-wrapper{
+    position: relative;
+    width: 245px;
+    overflow: hidden;
+}
+
+.price{
+    color: #feb250;
+    font-size: 16pt;
+}

@@ -11,7 +11,7 @@
 	{
 		"Id": 2,
 		"Direccion": "P.O. Box 657, 9831 Cursus St.",
-		"Ciudad": "Orlando",
+		"Ciudad": "San Francisco",
 		"Telefono": "488-441-5521",
 		"Codigo_Postal": "04436",
 		"Tipo": "Casa de Campo",
@@ -47,7 +47,7 @@
 	{
 		"Id": 6,
 		"Direccion": "672-9576 Consectetuer Road",
-		"Ciudad": "Orlando",
+		"Ciudad": "San Francisco",
 		"Telefono": "355-601-5749",
 		"Codigo_Postal": "210020",
 		"Tipo": "Casa de Campo",
@@ -56,7 +56,7 @@
 	{
 		"Id": 7,
 		"Direccion": "549-5766 Sodales St.",
-		"Ciudad": "Orlando",
+		"Ciudad": "San Francisco",
 		"Telefono": "557-228-6918",
 		"Codigo_Postal": "16794",
 		"Tipo": "Casa",
@@ -74,7 +74,7 @@
 	{
 		"Id": 9,
 		"Direccion": "175-4344 Nec, Ave",
-		"Ciudad": "Orlando",
+		"Ciudad": "San Francisco",
 		"Telefono": "578-170-6179",
 		"Codigo_Postal": "P0C 0G3",
 		"Tipo": "Casa de Campo",
@@ -119,7 +119,7 @@
 	{
 		"Id": 14,
 		"Direccion": "P.O. Box 523, 2126 Aliquet Rd.",
-		"Ciudad": "Orlando",
+		"Ciudad": "San Francisco",
 		"Telefono": "986-825-6899",
 		"Codigo_Postal": "37045",
 		"Tipo": "Casa de Campo",
@@ -173,7 +173,7 @@
 	{
 		"Id": 20,
 		"Direccion": "Ap #393-3363 Fringilla Road",
-		"Ciudad": "Orlando",
+		"Ciudad": "San Francisco",
 		"Telefono": "335-278-9678",
 		"Codigo_Postal": "8635",
 		"Tipo": "Apartamento",
@@ -326,7 +326,7 @@
 	{
 		"Id": 37,
 		"Direccion": "4084 Sit St.",
-		"Ciudad": "Orlando",
+		"Ciudad": "San Francisco",
 		"Telefono": "326-023-8622",
 		"Codigo_Postal": "02187",
 		"Tipo": "Apartamento",
@@ -371,7 +371,7 @@
 	{
 		"Id": 42,
 		"Direccion": "P.O. Box 315, 6041 Duis Avenue",
-		"Ciudad": "Orlando",
+		"Ciudad": "San Francisco",
 		"Telefono": "186-671-4205",
 		"Codigo_Postal": "893592",
 		"Tipo": "Casa de Campo",
@@ -398,7 +398,7 @@
 	{
 		"Id": 45,
 		"Direccion": "Ap #864-1235 Mi Rd.",
-		"Ciudad": "Orlando",
+		"Ciudad": "San Francisco",
 		"Telefono": "723-547-1102",
 		"Codigo_Postal": "G9T 9P2",
 		"Tipo": "Casa de Campo",
@@ -479,7 +479,7 @@
 	{
 		"Id": 54,
 		"Direccion": "228-2036 Tincidunt Road",
-		"Ciudad": "Orlando",
+		"Ciudad": "San Francisco",
 		"Telefono": "565-750-7079",
 		"Codigo_Postal": "7217",
 		"Tipo": "Casa",
@@ -524,7 +524,7 @@
 	{
 		"Id": 59,
 		"Direccion": "5605 Nisi Ave",
-		"Ciudad": "Orlando",
+		"Ciudad": "San Francisco",
 		"Telefono": "842-236-6720",
 		"Codigo_Postal": "188876",
 		"Tipo": "Casa",
@@ -578,7 +578,7 @@
 	{
 		"Id": 65,
 		"Direccion": "Ap #581-5945 Ullamcorper Road",
-		"Ciudad": "Orlando",
+		"Ciudad": "San Francisco",
 		"Telefono": "820-970-3451",
 		"Codigo_Postal": "35826",
 		"Tipo": "Apartamento",
@@ -587,7 +587,7 @@
 	{
 		"Id": 66,
 		"Direccion": "Ap #298-502 Dolor. Ave",
-		"Ciudad": "Orlando",
+		"Ciudad": "San Francisco",
 		"Telefono": "339-015-5616",
 		"Codigo_Postal": "8625GM",
 		"Tipo": "Casa de Campo",
@@ -722,7 +722,7 @@
 	{
 		"Id": 81,
 		"Direccion": "P.O. Box 284, 8629 Egestas. St.",
-		"Ciudad": "Orlando",
+		"Ciudad": "San Francisco",
 		"Telefono": "196-562-2718",
 		"Codigo_Postal": "A8Z 9N1",
 		"Tipo": "Casa",
@@ -776,7 +776,7 @@
 	{
 		"Id": 87,
 		"Direccion": "3703 Quisque Rd.",
-		"Ciudad": "Orlando",
+		"Ciudad": "San Francisco",
 		"Telefono": "020-821-1050",
 		"Codigo_Postal": "54983",
 		"Tipo": "Apartamento",

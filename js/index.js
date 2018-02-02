@@ -60,5 +60,60 @@ $(document).ready(()=>{
 });
 
 
+$('#submitButton').submit(()=>{
+
+    let ciudad = $('#selectCiudad option:selected').val();
+    let tipo = $('#selectTipo option:selected').val();
+    let precio = $('#rangoPrecio').val();
+
+    event.preventDefault();
+
+    console.log(ciudad + ' + ' + tipo + ' + ' + precio);
+
+    //Llamado ajax a buscador.php
+    $.ajax{
+        { 
+          url:'./buscador.php',
+          type:'POST',
+          data: {ciudad:ciudad, tipo:tipo, precio:precio}
+        }
+    }.done((response)=>{
+        let data = JSON.parse(response);
+        var r = data.data;
+        showResult(r);
+    });
+    /*
+    $.get('buscador.php', {ciudad:ciudad, tipo:tipo, precio:precio}, function(response){
+        let data = JSON.parse(response);
+        var r = data.data;
+        showResult(r);
+    });*/
+});
+
+function showResult(array){
+    $('.resultados').empty();
+    for(let i=0; i<array.length; i++){
+        $('.resultados').append(`<div class="card horizontal">
+            <div class="card-image place-wrapper">
+                <img class="img-responsive place-image" src="img/${array[i].Ciudad}.png">
+            </div>
+            <div class="card-stacked">
+                <div class="card-content">
+                    <p>
+                        <b>Dirección: </b>${array[i].Direccion}<br>
+                        <b>Ciudad: </b>${array[i].Ciudad}<br>
+                        <b>Teléfono: </b>${array[i].Telefono}<br>
+                        <b>Código Postal: </b>${array[i].Codigo_Postal}<br>
+                        <b>Tipo: </b>${array[i].Tipo}<br>
+                        <span class="price"><b>Precio: </b>${array[i].Precio}</span>
+                    </p>
+                </div>
+                <div class="card-action">
+                    <a>+</a>
+                </div>
+            </div>
+        </div>`);
+    }
+}
 
 
