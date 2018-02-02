@@ -32,7 +32,7 @@ video#vidFondo {
   height: 130px;
 }
 .colFiltros{
-
+  background-color: rgba(102, 255, 255, 0.5);
   width: 25%;
   height: 100%;
   min-height: 570px;
@@ -43,8 +43,7 @@ video#vidFondo {
 .filtrosContenido{
   width: 100%;
   margin: 0 0;
-  background-color: rgba(102, 255, 255, 0.5);
-  border-radius: 0px 0px 25px 25px;
+  background-color: #F2F2F2;
   display: flex;
   flex-flow: row wrap;
   align-content: flex-start;
@@ -59,7 +58,8 @@ video#vidFondo {
     font-size: 1.3rem;
 }
 .filtroCiudad{
-  width: 100%;
+    margin: 15px auto;
+  width: 90%;
   height: 100px;
   text-align: center;
 }
@@ -68,9 +68,10 @@ video#vidFondo {
   width: 90%;
 }
 .filtroTipo{
-  width: 100%;
-  height: 100px;
-  text-align: center;
+    margin: 15px auto;
+    width: 90%;
+    height: 100px;
+    text-align: center;
 }
 .filtroTipo .select-wrapper{
   margin: 5px auto;
@@ -139,27 +140,44 @@ video#vidFondo {
   font-size: 1.3rem;
   color: #ffab40;
 }
-.card-stacked{
-  width: 65%;
-}
+
 .card-action{
   text-align: right;
 }
+
 .place-image{
+
     position:absolute;
-    width:100%;
-    min-height: 245px;
-    display: block;
-    object-fit: cover;
+
+    max-height: 245px;
+    left:0;
+    right:0;
+    z-index: 1;
+}
+
+.place-icon{
+
+    position:absolute;
+    width: 50px;
+    height: 50px;
+    max-width: 50px;
+    left:10px;
+    top:10px;
+    z-index: 2;
+    
+
 }
 
 .place-wrapper{
+
     position: relative;
-    width: 245px;
-    overflow: hidden;
+  
 }
 
 .price{
-    color: #feb250;
+    color: rgb(40,85,129);
     font-size: 16pt;
 }
+
+
+

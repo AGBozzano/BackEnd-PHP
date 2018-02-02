@@ -1,33 +1,41 @@
 <?php
 
 
-const CIUDAD = array('Houston','Los Angeles','Miami','New York','Orlando','Washington');
-
-const TIPOS = array('Apartamento','Casa','Casa de Campo');
-
-
-
-
 
 /*
+const CIUDAD = array('Houston','Los Angeles','Miami','New York','San Francisco','Washington');
+const TIPOS = array('Apartamento','Casa','Casa de Campo');
+*/
+
+$CIUDAD = array();
+$TIPOS = array();
+
+$file = fopen("data-1.json", "r") or die("No se puede abrir el archivo");
+$json = fread($file, filesize('data-1.json'));
+$data = json_decode($json, true);
+  
   foreach($data as $i){
 
-      if(in_array($i['Tipo'], TIPOS)){
+      if(in_array($i['Tipo'], $TIPOS)){
         //Nada
       }else{
-        array_push(TIPOS, $i['Tipo']);
+
+        array_push($TIPOS, $i['Tipo']);
       }
 
-      if(in_array($i['Ciudad'], CIUDAD)){
+      if(in_array($i['Ciudad'], $CIUDAD)){
         //Nada
+        
       }else{
-        array_push(CIUDAD, $i['Ciudad']);
+
+        array_push($CIUDAD, $i['Ciudad']);
+
       }
-     
   }
-*/
-?>
+  sort($CIUDAD);
+  sort($TIPOS);
 
+?>
 
 <!DOCTYPE html>
 <html>
@@ -42,10 +50,11 @@ const TIPOS = array('Apartamento','Casa','Casa de Campo');
   <link type="text/css" rel="stylesheet" href="css/index.css"  media="screen,projection"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Formulario</title>
+
 </head>
 
 <body>
-  <video src="img/video.mp4" id="vidFondo"></video>
+
 
   <div class="contenedor">
     <div class="card rowTitulo">
@@ -61,7 +70,7 @@ const TIPOS = array('Apartamento','Casa','Casa de Campo');
             <label for="selectCiudad">Ciudad:</label>
             <select name="ciudad" id="selectCiudad">
               <option value="" selected>Elige una ciudad</option>
-              <?php foreach(CIUDAD as $value) { ?>
+              <?php foreach($CIUDAD as $value) { ?>
                 <option value='<?php echo $value ?>'><?php echo $value ?></option>
               <?php } ?>
             </select>
@@ -70,7 +79,7 @@ const TIPOS = array('Apartamento','Casa','Casa de Campo');
             <label for="selecTipo">Tipo:</label><br>
             <select name="tipo" id="selectTipo">
               <option value="" selected>Elige un tipo</option>
-              <?php foreach(TIPOS as $value) { ?>
+              <?php foreach($TIPOS as $value) { ?>
                 <option value='<?php echo $value ?>'><?php echo $value ?></option>
               <?php } ?>
             </select>
@@ -102,3 +111,6 @@ const TIPOS = array('Apartamento','Casa','Casa de Campo');
   <script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>
+<?php 
+  fclose($file);
+?>

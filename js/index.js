@@ -10,10 +10,10 @@ $.fn.scrollEnd = function(callback, timeout) {
     $this.data('scrollTimeout', setTimeout(callback,timeout));
   });
 };
+
 /*
   Función que inicializa el elemento Slider
 */
-
 function inicializarSlider(){
   $("#rangoPrecio").ionRangeSlider({
     type: "double",
@@ -26,9 +26,10 @@ function inicializarSlider(){
   });
 }
 /*
-  Función que reproduce el video de fondo al hacer scroll, y deteiene la reproducción al detener el scroll
+    DESHABILITADA PORQUE NO HAY IMAGEN!
+    Función que reproduce el video de fondo al hacer scroll, y deteiene la reproducción al detener el scroll
 */
-function playVideoOnScroll(){
+/*function playVideoOnScroll(){
   var ultimoScroll = 0,
       intervalRewind;
   var video = document.getElementById('vidFondo');
@@ -47,57 +48,56 @@ function playVideoOnScroll(){
       video.pause();
     }, 10)
 }
+*/
+
+//funcion para mostrar todos los resultados
+$('#mostrarTodos').click(function(){
+    $.get('./data-1.json', function(data){
+        showResult(data);
+    });
+});
 
 
-
-playVideoOnScroll();
 
 $(document).ready(()=>{
     inicializarSlider();
-
     //Inicializa los select
     $('select').material_select();
 });
 
 
-$('#submitButton').submit(()=>{
+$('#submitButton').click((event)=>{
 
     let ciudad = $('#selectCiudad option:selected').val();
     let tipo = $('#selectTipo option:selected').val();
     let precio = $('#rangoPrecio').val();
 
     event.preventDefault();
-
     console.log(ciudad + ' + ' + tipo + ' + ' + precio);
 
     //Llamado ajax a buscador.php
-    $.ajax{
+    $.ajax(
         { 
           url:'./buscador.php',
           type:'POST',
           data: {ciudad:ciudad, tipo:tipo, precio:precio}
         }
-    }.done((response)=>{
+    ).done((response)=>{
         let data = JSON.parse(response);
         var r = data.data;
         showResult(r);
     });
-    /*
-    $.get('buscador.php', {ciudad:ciudad, tipo:tipo, precio:precio}, function(response){
-        let data = JSON.parse(response);
-        var r = data.data;
-        showResult(r);
-    });*/
 });
 
 function showResult(array){
     $('.resultados').empty();
     for(let i=0; i<array.length; i++){
-        $('.resultados').append(`<div class="card horizontal">
-            <div class="card-image place-wrapper">
-                <img class="img-responsive place-image" src="img/${array[i].Ciudad}.png">
+        $('.resultados').append(`<div class="row card">
+            <img class="place-icon" src="img/${array[i].Tipo}.png">
+            <div class="card-image place-wrapper col s4">
+                <img class="place-image" src="img/${array[i].Ciudad}.png">
             </div>
-            <div class="card-stacked">
+            <div class="card-stacked col s8">
                 <div class="card-content">
                     <p>
                         <b>Dirección: </b>${array[i].Direccion}<br>
@@ -108,12 +108,10 @@ function showResult(array){
                         <span class="price"><b>Precio: </b>${array[i].Precio}</span>
                     </p>
                 </div>
-                <div class="card-action">
-                    <a>+</a>
-                </div>
+
             </div>
         </div>`);
     }
-}
+};
 
 
