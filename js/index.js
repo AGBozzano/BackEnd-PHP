@@ -48,5 +48,17 @@ function playVideoOnScroll(){
     }, 10)
 }
 
-inicializarSlider();
+
+
 playVideoOnScroll();
+
+$(document).ready(()=>{
+    inicializarSlider();
+
+    //Inicializa los select
+    $('select').material_select();
+});
+
+
+
+

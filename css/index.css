@@ -32,6 +32,7 @@ video#vidFondo {
   height: 130px;
 }
 .colFiltros{
+
   width: 25%;
   height: 100%;
   min-height: 570px;
@@ -42,7 +43,8 @@ video#vidFondo {
 .filtrosContenido{
   width: 100%;
   margin: 0 0;
-  background-color: #F2F2F2;
+  background-color: rgba(102, 255, 255, 0.5);
+  border-radius: 0px 0px 25px 25px;
   display: flex;
   flex-flow: row wrap;
   align-content: flex-start;

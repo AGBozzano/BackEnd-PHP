@@ -1,6 +1,38 @@
+<?php
+
+
+const CIUDAD = array('Houston','Los Angeles','Miami','New York','Orlando','Washington');
+
+const TIPOS = array('Apartamento','Casa','Casa de Campo');
+
+
+
+
+
+/*
+  foreach($data as $i){
+
+      if(in_array($i['Tipo'], TIPOS)){
+        //Nada
+      }else{
+        array_push(TIPOS, $i['Tipo']);
+      }
+
+      if(in_array($i['Ciudad'], CIUDAD)){
+        //Nada
+      }else{
+        array_push(CIUDAD, $i['Ciudad']);
+      }
+     
+  }
+*/
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
+
   <meta charset="utf-8">
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
@@ -29,13 +61,18 @@
             <label for="selectCiudad">Ciudad:</label>
             <select name="ciudad" id="selectCiudad">
               <option value="" selected>Elige una ciudad</option>
+              <?php foreach(CIUDAD as $value) { ?>
+                <option value='<?php echo $value ?>'><?php echo $value ?></option>
+              <?php } ?>
             </select>
           </div>
           <div class="filtroTipo input-field">
             <label for="selecTipo">Tipo:</label><br>
             <select name="tipo" id="selectTipo">
               <option value="" selected>Elige un tipo</option>
-
+              <?php foreach(TIPOS as $value) { ?>
+                <option value='<?php echo $value ?>'><?php echo $value ?></option>
+              <?php } ?>
             </select>
           </div>
           <div class="filtroPrecio">
@@ -55,7 +92,7 @@
         <div class="divider"></div>
         <button type="button" name="todos" class="btn-flat waves-effect" id="mostrarTodos">Mostrar Todos</button>
       </div>
-
+      <div class="resultados"></div>
     </div>
   </div>
 
